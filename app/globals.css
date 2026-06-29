@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-pixel: "Press Start 2P", monospace;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #fdf3df;
+  color: #241640;
+  font-family: var(--font-pixel);
+  -webkit-font-smoothing: none;
+  font-smooth: never;
+  overscroll-behavior: none;
+}
+
+/* Crisp pixel rendering for sprites */
+img,
+.pixelated {
+  image-rendering: pixelated;
+}
+
+/* Thin scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #efe3c8;
+}
+::-webkit-scrollbar-thumb {
+  background: #6a1b9a;
+  border-radius: 0;
+}
+
+@layer components {
+  /* Bold-bordered arcade panel with a chunky hard shadow (no soft glow). */
+  .arcade-panel {
+    @apply border-2 border-ink bg-panel;
+    box-shadow: 4px 4px 0 #241640;
+  }
+
+  /* Chunky arcade button */
+  .arcade-btn {
+    @apply font-pixel uppercase tracking-wider border-2 bg-panel px-4 py-3
+           transition-transform active:translate-x-0.5 active:translate-y-0.5
+           select-none;
+  }
+
+  /* Subtle hard offset gives colored text arcade pop while keeping contrast. */
+  .text-glow-pink,
+  .text-glow-cyan,
+  .text-glow-green,
+  .text-glow-yellow {
+    text-shadow: 2px 2px 0 rgba(36, 22, 64, 0.18);
+  }
+}
+
+/* Disable tap highlight on mobile for a game-like feel */
+button {
+  -webkit-tap-highlight-color: transparent;
+}
