@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 
+import Icon from "./Icon";
+
 export type Tab = "targets" | "eliminated" | "leaderboard" | "feed";
 
 const TABS: { id: Tab; label: string; icon: string }[] = [
@@ -34,13 +36,13 @@ export default function TabBar({
                 className="absolute inset-x-2 top-0 h-0.5 bg-neon-cyan shadow-neon-cyan"
               />
             )}
-            <span
-              className={`text-base ${
+            <Icon
+              className={`text-lg ${
                 on ? "text-neon-cyan text-glow-cyan" : "text-gray-500"
               }`}
             >
               {t.icon}
-            </span>
+            </Icon>
             <span className={on ? "text-neon-cyan" : "text-gray-500"}>
               {t.label}
             </span>

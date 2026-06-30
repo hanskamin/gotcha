@@ -11,6 +11,7 @@ import Leaderboard from "./Leaderboard";
 import Marquee from "./Marquee";
 import TabBar, { type Tab } from "./TabBar";
 import TargetList from "./TargetList";
+import Icon from "./Icon";
 
 export default function Dashboard() {
   const players = useGame((s) => s.players);
@@ -75,7 +76,7 @@ export default function Dashboard() {
         onClick={() => setModalOpen(true)}
         className="fixed bottom-20 left-1/2 z-30 -translate-x-1/2 border-2 border-neon-pink bg-panel px-6 py-4 text-sm text-neon-pink text-glow-pink shadow-neon-pink animate-pulse-glow"
       >
-        ⊕ GOTCHA!
+        <Icon>⊕</Icon> GOTCHA!
       </motion.button>
 
       <TabBar active={tab} onChange={setTab} />

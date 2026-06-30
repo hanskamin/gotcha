@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useMemo } from "react";
 import { useGame } from "@/lib/store";
+import Icon from "./Icon";
 
 const RANK_COLORS = [
   "text-neon-yellow text-glow-yellow",
@@ -27,7 +28,7 @@ export default function Leaderboard() {
   return (
     <div className="flex flex-col gap-2">
       <p className="text-center text-[10px] text-neon-yellow text-glow-yellow">
-        ★ HIGH SCORES ★
+        <Icon>★</Icon> HIGH SCORES <Icon>★</Icon>
       </p>
       <ul className="flex flex-col gap-1">
         {ranked.map((p, i) => (
