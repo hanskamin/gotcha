@@ -57,7 +57,7 @@ export default function SetupScreen() {
 
       <div className="arcade-panel flex flex-1 flex-col p-4">
         <label className="mb-2 block text-[10px] text-neon-yellow text-glow-yellow">
-          <Icon>▸</Icon> PLAYER ROSTER
+          PLAYER ROSTER
         </label>
         <textarea
           value={text}
@@ -100,7 +100,7 @@ export default function SetupScreen() {
             : "cursor-not-allowed border-ink/20 text-ink/30"
         }`}
       >
-        <Icon>▶</Icon> INSERT COIN — START GAME
+        INSERT COIN — START GAME
       </motion.button>
       {!canStart && count < 2 && (
         <p className="mt-2 text-center text-[10px] text-gray-500">

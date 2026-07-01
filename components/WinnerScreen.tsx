@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { useMemo } from "react";
 import { useGame } from "@/lib/store";
-import Icon from "./Icon";
 
 const CONFETTI = Array.from({ length: 40 });
 const COLORS = ["#c2156a", "#0b7a91", "#1c7d28", "#a86600", "#6a1b9a"];
@@ -81,9 +80,7 @@ export default function WinnerScreen() {
 
       {/* Mini podium */}
       <div className="mt-6 w-full max-w-xs">
-        <p className="mb-2 text-[10px] text-neon-cyan/70">
-          <Icon>★</Icon> TOP HUNTERS <Icon>★</Icon>
-        </p>
+        <p className="mb-2 text-[10px] text-neon-cyan/70">TOP HUNTERS</p>
         {podium.map((p, i) => (
           <div
             key={p.id}
@@ -106,7 +103,7 @@ export default function WinnerScreen() {
         }}
         className="arcade-btn mt-8 border-neon-green text-neon-green text-glow-green shadow-neon-green animate-pulse-glow"
       >
-        <Icon>▶</Icon> NEW GAME
+        NEW GAME
       </motion.button>
     </div>
   );

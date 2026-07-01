@@ -108,7 +108,7 @@ export default function GotchaModal({
           >
             <div className="flex items-center justify-between border-b-2 border-neon-pink/50 p-3">
               <h2 className="text-sm text-neon-pink text-glow-pink">
-                <Icon>⊕</Icon> LOG A GOTCHA
+                LOG A GOTCHA
               </h2>
               <button
                 onClick={close}
@@ -193,7 +193,7 @@ export default function GotchaModal({
                     : "cursor-not-allowed border-ink/20 text-ink/30"
                 }`}
               >
-                ▶ CONFIRM GOTCHA
+                CONFIRM GOTCHA
               </motion.button>
             </div>
           </motion.div>

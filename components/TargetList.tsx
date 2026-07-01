@@ -52,7 +52,7 @@ export default function TargetList() {
             className="arcade-btn border-neon-purple px-3 py-2 text-[9px] text-neon-purple"
             title="Re-randomize chain (only before the first elimination)"
           >
-            <Icon>⟳</Icon> SHUFFLE
+            SHUFFLE
           </button>
         )}
       </div>
