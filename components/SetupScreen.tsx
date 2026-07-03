@@ -100,7 +100,7 @@ export default function SetupScreen() {
             : "cursor-not-allowed border-ink/20 text-ink/30"
         }`}
       >
-        INSERT COIN — START GAME
+        START GAME
       </motion.button>
       {!canStart && count < 2 && (
         <p className="mt-2 text-center text-[10px] text-gray-500">
