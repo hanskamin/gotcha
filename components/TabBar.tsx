@@ -21,7 +21,7 @@ export default function TabBar({
   onChange: (t: Tab) => void;
 }) {
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-30 mx-auto grid max-w-2xl grid-cols-4 border-t-2 border-neon-cyan bg-void/95 backdrop-blur">
+    <nav className="fixed inset-x-0 bottom-0 z-30 mx-auto grid max-w-2xl grid-cols-4 bg-void/95 backdrop-blur">
       {TABS.map((t) => {
         const on = active === t.id;
         return (

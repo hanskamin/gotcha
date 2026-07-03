@@ -58,7 +58,7 @@ export default function TargetList() {
       </div>
 
       <p className="text-[10px] text-neon-cyan/70">
-        {alive.length} ALIVE · HUNTER <Icon className="text-neon-yellow">▸</Icon> TARGET
+        {alive.length} ALIVE · HUNTER <span className="text-neon-yellow">▸</span> TARGET
       </p>
 
       <ul className="flex flex-col gap-2">
@@ -74,7 +74,7 @@ export default function TargetList() {
             >
               <span className="flex min-w-0 items-center gap-2">
                 <span className="truncate text-neon-green">{p.name}</span>
-                <Icon className="shrink-0 text-neon-yellow">▸</Icon>
+                <span className="shrink-0 text-neon-yellow">▸</span>
                 <span className="truncate text-neon-pink text-glow-pink">
                   {nameOf(p.targetId)}
                 </span>

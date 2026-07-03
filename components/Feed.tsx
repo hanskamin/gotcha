@@ -56,7 +56,7 @@ export default function Feed() {
               {timeLabel(e.at)}
             </span>
             <span className="truncate text-neon-green">{nameOf(e.killerId)}</span>
-            <Icon className="shrink-0 text-neon-yellow">▸</Icon>
+            <span className="shrink-0 text-neon-yellow">▸</span>
             <span className="truncate text-neon-pink line-through decoration-2">
               {nameOf(e.victimId)}
             </span>
