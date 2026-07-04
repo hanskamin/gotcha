@@ -96,7 +96,7 @@ export default function SetupScreen() {
         onClick={handleStart}
         className={`arcade-btn mt-5 w-full py-5 text-base ${
           canStart
-            ? "border-neon-green text-neon-green text-glow-green shadow-neon-green animate-pulse-glow"
+            ? "border-neon-green text-neon-green text-glow-green shadow-neon-green"
             : "cursor-not-allowed border-ink/20 text-ink/30"
         }`}
       >
