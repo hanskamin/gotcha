@@ -209,7 +209,7 @@ function ConfirmRow({ killer, victim }: { killer: Player; victim: Player }) {
       <span className="truncate text-neon-green text-glow-green">
         {killer.name}
       </span>
-      <span className="shrink-0 text-neon-yellow">GOTCHA▸</span>
+      <span className="shrink-0 text-neon-yellow">GOTCHA👉🏽</span>
       <span className="truncate text-neon-pink text-glow-pink line-through decoration-2">
         {victim.name}
       </span>
