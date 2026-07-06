@@ -73,7 +73,8 @@ export default function Dashboard() {
       <motion.button
         whileTap={{ scale: 0.9 }}
         onClick={() => setModalOpen(true)}
-        className="fixed bottom-20 left-1/2 z-30 -translate-x-1/2 border-2 border-neon-pink bg-panel px-6 py-4 text-sm text-neon-pink text-glow-pink shadow-neon-pink animate-pulse-glow"
+        style={{ x: "-50%" }}
+        className="fixed bottom-20 left-1/2 z-30 border-2 border-neon-pink bg-panel px-6 py-4 text-sm text-neon-pink text-glow-pink shadow-neon-pink animate-pulse-glow"
       >
         GOTCHA!
       </motion.button>

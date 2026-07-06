@@ -142,7 +142,6 @@ export default function GotchaModal({
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder={`SEARCH ${mode === "killer" ? "HUNTER" : "VICTIM"}…`}
                 className="w-full border-2 border-ink/40 bg-panel p-3 text-xs text-ink outline-none focus:border-neon-cyan"
-                autoFocus
               />
             </div>
 
@@ -209,7 +208,7 @@ function ConfirmRow({ killer, victim }: { killer: Player; victim: Player }) {
       <span className="truncate text-neon-green text-glow-green">
         {killer.name}
       </span>
-      <span className="shrink-0 text-neon-yellow">GOTCHA▸</span>
+      <span className="shrink-0 text-neon-yellow">👉🏽</span>
       <span className="truncate text-neon-pink text-glow-pink line-through decoration-2">
         {victim.name}
       </span>

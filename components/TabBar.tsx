@@ -33,7 +33,7 @@ export default function TabBar({
             {on && (
               <motion.span
                 layoutId="tab-underline"
-                className="absolute inset-x-2 top-0 h-0.5 bg-neon-cyan shadow-neon-cyan"
+                className="absolute inset-x-2 top-0 h-0.5 bg-neon-cyan"
               />
             )}
             <Icon
