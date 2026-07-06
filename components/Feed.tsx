@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useMemo } from "react";
 import { useGame } from "@/lib/store";
+import Icon from "./Icon";
 
 function timeLabel(ms: number): string {
   const d = new Date(ms);
@@ -34,7 +35,7 @@ export default function Feed() {
             className="arcade-btn border-neon-yellow px-3 py-2 text-[9px] text-neon-yellow"
             title="Undo the most recent gotcha"
           >
-            ⟲ UNDO LAST
+            <Icon>⟲</Icon> UNDO LAST
           </button>
         )}
       </div>

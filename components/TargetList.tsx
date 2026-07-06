@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useMemo, useState } from "react";
 import { useGame } from "@/lib/store";
+import Icon from "./Icon";
 
 export default function TargetList() {
   const players = useGame((s) => s.players);
@@ -51,13 +52,13 @@ export default function TargetList() {
             className="arcade-btn border-neon-purple px-3 py-2 text-[9px] text-neon-purple"
             title="Re-randomize chain (only before the first elimination)"
           >
-            ⟳ SHUFFLE
+            SHUFFLE
           </button>
         )}
       </div>
 
       <p className="text-[10px] text-neon-cyan/70">
-        {alive.length} ALIVE · HUNTER ▸ TARGET
+        {alive.length} ALIVE · HUNTER <span className="text-neon-yellow">▸</span> TARGET
       </p>
 
       <ul className="flex flex-col gap-2">
@@ -87,10 +88,10 @@ export default function TargetList() {
                   )
                     removePlayer(p.id);
                 }}
-                className="ml-2 shrink-0 px-2 text-[9px] text-gray-500 hover:text-neon-pink"
+                className="ml-2 shrink-0 px-2 text-gray-500 hover:text-neon-pink"
                 title="Player dropped out"
               >
-                ✕
+                <Icon>✕</Icon>
               </button>
             </motion.li>
           ))}

@@ -51,6 +51,17 @@ img,
            select-none;
   }
 
+  /* Icon glyphs are Unicode symbols that fall back to the system font (the
+     pixel font lacks them). Scale them up (em-based, so they track the
+     surrounding text) and re-center against the pixel-font baseline. Single
+     knob for icon sizing app-wide. */
+  .icon {
+    font-size: 1.4em;
+    line-height: 1;
+    vertical-align: -0.1em;
+    display: inline-block;
+  }
+
   /* Subtle hard offset gives colored text arcade pop while keeping contrast. */
   .text-glow-pink,
   .text-glow-cyan,

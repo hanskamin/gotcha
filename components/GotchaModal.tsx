@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useMemo, useState } from "react";
 import { useGame } from "@/lib/store";
 import type { Player } from "@/lib/types";
+import Icon from "./Icon";
 
 type Mode = "killer" | "victim";
 
@@ -107,14 +108,14 @@ export default function GotchaModal({
           >
             <div className="flex items-center justify-between border-b-2 border-neon-pink/50 p-3">
               <h2 className="text-sm text-neon-pink text-glow-pink">
-                ⊕ LOG A GOTCHA
+                LOG A GOTCHA
               </h2>
               <button
                 onClick={close}
                 className="px-2 text-neon-cyan hover:text-neon-pink"
                 aria-label="Close"
               >
-                ✕
+                <Icon>✕</Icon>
               </button>
             </div>
 
@@ -159,7 +160,7 @@ export default function GotchaModal({
                   <span className="truncate">{p.name}</span>
                   {mode === "killer" && (
                     <span className="ml-2 shrink-0 text-[9px] text-neon-cyan/70">
-                      → {nameOf(p.targetId)}
+                      <Icon>→</Icon> {nameOf(p.targetId)}
                     </span>
                   )}
                 </button>
@@ -192,7 +193,7 @@ export default function GotchaModal({
                     : "cursor-not-allowed border-ink/20 text-ink/30"
                 }`}
               >
-                ▶ CONFIRM GOTCHA
+                CONFIRM GOTCHA
               </motion.button>
             </div>
           </motion.div>

@@ -80,7 +80,7 @@ export default function WinnerScreen() {
 
       {/* Mini podium */}
       <div className="mt-6 w-full max-w-xs">
-        <p className="mb-2 text-[10px] text-neon-cyan/70">★ TOP HUNTERS ★</p>
+        <p className="mb-2 text-[10px] text-neon-cyan/70">TOP HUNTERS</p>
         {podium.map((p, i) => (
           <div
             key={p.id}
@@ -103,7 +103,7 @@ export default function WinnerScreen() {
         }}
         className="arcade-btn mt-8 border-neon-green text-neon-green text-glow-green shadow-neon-green animate-pulse-glow"
       >
-        ▶ NEW GAME
+        NEW GAME
       </motion.button>
     </div>
   );

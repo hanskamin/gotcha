@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
 import { useGame } from "@/lib/store";
 import Marquee from "./Marquee";
+import Icon from "./Icon";
 
 const MAX = 200;
 
@@ -56,7 +57,7 @@ export default function SetupScreen() {
 
       <div className="arcade-panel flex flex-1 flex-col p-4">
         <label className="mb-2 block text-[10px] text-neon-yellow text-glow-yellow">
-          ▸ PLAYER ROSTER
+          PLAYER ROSTER
         </label>
         <textarea
           value={text}
@@ -76,7 +77,7 @@ export default function SetupScreen() {
           </span>
           {dupes.length > 0 && (
             <span className="text-neon-yellow">
-              ⚠ DUPES: {dupes.slice(0, 3).join(", ")}
+              <Icon>⚠</Icon> DUPES: {dupes.slice(0, 3).join(", ")}
               {dupes.length > 3 ? "…" : ""}
             </span>
           )}
@@ -95,11 +96,11 @@ export default function SetupScreen() {
         onClick={handleStart}
         className={`arcade-btn mt-5 w-full py-5 text-base ${
           canStart
-            ? "border-neon-green text-neon-green text-glow-green shadow-neon-green animate-pulse-glow"
+            ? "border-neon-green text-neon-green text-glow-green shadow-neon-green"
             : "cursor-not-allowed border-ink/20 text-ink/30"
         }`}
       >
-        ▶ INSERT COIN — START GAME
+        START GAME
       </motion.button>
       {!canStart && count < 2 && (
         <p className="mt-2 text-center text-[10px] text-gray-500">
