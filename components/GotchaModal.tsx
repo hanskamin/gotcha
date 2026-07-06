@@ -142,7 +142,6 @@ export default function GotchaModal({
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder={`SEARCH ${mode === "killer" ? "HUNTER" : "VICTIM"}…`}
                 className="w-full border-2 border-ink/40 bg-panel p-3 text-xs text-ink outline-none focus:border-neon-cyan"
-                autoFocus
               />
             </div>
 
